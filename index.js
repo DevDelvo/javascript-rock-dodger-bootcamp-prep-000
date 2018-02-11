@@ -114,7 +114,7 @@ function endGame() {
 
   ROCKS.forEach(function(rock) {rock.remove()}); //clears rocks from the screen 
 
-  document.removeEventListener('keydown', moveDodger); //stop listening to arrow inputs
+  document.removeEventListener('keydown', moveDodger);
 
   START.innerHTML = 'PLAY AGAIN?';
   START.style.display = 'inline';
