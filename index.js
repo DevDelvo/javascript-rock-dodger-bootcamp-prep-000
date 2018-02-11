@@ -110,17 +110,18 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
-  clearInterval(gameInterval); //stops rocks from being generated.
+  clearInterval(gameInterval)
 
-  ROCKS.forEach(function(rock) {rock.remove()}); //clears rocks from the screen 
+  ROCKS.forEach(function(rock) { rock.remove() })
 
-  document.removeEventListener('keydown', moveDodger); //stop listening to arrow inputs
+  document.removeEventListener('keydown', moveDodger)
 
-  START.innerHTML = 'PLAY AGAIN?';
-  START.style.display = 'inline';
+  START.innerHTML = 'Play again?'
+  START.style.display = 'inline'
 
-  return alert('GAME OVER: You lose!');
+  return alert('YOU LOSE!')
 }
+
 
 function moveDodger(e) {
   const input = e.which;
